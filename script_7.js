@@ -4,17 +4,17 @@ let response = function (question) {
     // Si c'est une question ou juste ?
     if (question.endsWith("?")) {
         return "Ouais ouais...";
-      }
-      // Si c'est une question
-      else if (question === question.toUpperCase()) {
+    }
+    // MAJ
+    if (question === question.toUpperCase() && question.length > 0 ) {
         return "Pwa, calme-toi...";
-      }
-    // Inclus le mot fornite
-    else if (question.includes("fortnite")) {
+    }
+    // Inclus le mot fortnite
+    if (question.includes("fortnite")) {
         return "on s'fait une partie soum-soum ?";
     }
-    // Si on envoie un msg vide
-    else if (question == null || question == "") {
+    // Si on envoie un msg vide 
+    if (question == null || question == "") {
         return "t'es en PLS ?";
     }
     else {
