@@ -23,9 +23,9 @@ function traduireARN(arn) {
         UAU: "Tyrosine",
         UAC: "Tyrosine",
     };
-    //(/.{1,3}/g) permet de diviser l'ARN en codons de trois lettres
-    const codons = arn.match(/.{1,3}/g);
-    const protéines = codons.map(codon => codeGénétique[codon]).join("-");
+    //(/.{1,3}/g) permet de diviser l'ARN en codons de trois lettres et le g permet de cherche toutes les occurences
+    const codons = arn.match(/.{1,3}/g); // match permet de chercher expression régulière de (/.{1,3}/g) ( regex)
+    const protéines = codons.map(codon => codeGénétique[codon]);
     return protéines;
 }
 
